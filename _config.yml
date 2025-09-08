@@ -19,16 +19,19 @@ nav:
   Projects: http://github.com/ralphschuler
   About: /about/
 
-
 # Links to your social media accounts.
-# The keys should correspond to Fontawesome icon names
+# The 'icon' keys should correspond to Fontawesome icon names
 # (see https://fontawesome.com/icons?d=gallery&s=brands);
 # only 'mail' is an exception.
-
+# You can optionally add a 'label' key to set the title attribute on the link.
+# 'icon' value will be used as title when 'label' is missing.
 social_links:
-  github: http://github.com/ralphschuler
-  codepen: http://codepen.io/ralph-schuler
-  mail: mailto:ralph.schuler@nyphon.de
+  - icon: github
+    link: http://github.com/ralphschuler
+  - icon: codepen
+    link: http://codepen.io/ralph-schuler
+  - icon: mail
+    link: mailto:ralph.schuler@nyphon.de
 
 # Customize the overview with displaying a tagcloud on the index page.
 # Options: https://hexo.io/docs/helpers.html#tagcloud
@@ -63,6 +66,14 @@ post:
 copyright:
   start_year: 2020
   end_year:
+
+# Customize the 404 page
+# Options:
+#   - enabled: whether to enable the 404 page (404.html).
+error_404:
+  enabled: true
+  title: "404 Page Not Found"
+  description: "The page you are looking for might have been removed, had its name changed, or is temporarily unavailable."
 
 ##############################################################################
 # Look and Feel
@@ -116,7 +127,6 @@ colorscheme: dark
 # Maximal width of the page in rem units.
 page_width: 48
 
-
 ##############################################################################
 # Miscellaneous
 ##############################################################################
@@ -130,7 +140,6 @@ open_graph:
   fb_admins:
   twitter_id:
   google_plus:
-
 
 ##############################################################################
 # Plugins
@@ -173,6 +182,7 @@ umami_analytics:
   enabled: false
   id: e77e68be-f6e4-4br3-9365-2b76b57cd571
   host: https://analytics.domain.com
+  script_name: umami.js
 
 # Fill in you Gravatar email or hash if you want to use your gravatar as the
 # logo and/or favicons of you website.
@@ -186,6 +196,6 @@ cdn:
   enable: true
   jquery: https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js
   clipboard: https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.7/clipboard.min.js
-  font_awesome: https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css
+  font_awesome: https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css
   justified_gallery_css: https://cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.8.1/css/justifiedGallery.min.css
   justified_gallery_js: https://cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.8.1/js/jquery.justifiedGallery.min.js
